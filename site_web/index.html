@@ -15,14 +15,14 @@
         var Liste_agents = document.getElementById("agents_liste");
         $.ajax({
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: "/src/Liste_agents/",
+            url: "/src/Fiches_agents/",
             success: function (data) {
                 // List all mp4 file names in the page
                 $(data).find("a:contains(" + ".html" + ")").each(function () {
                     console.log(this.href.replace(window.location.host, ""));
                     var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace(".html","");
                     //console.log(filename);
-                   document.getElementById('agents_liste').innerHTML += '<a href="src/Liste_agents/' + filename + '.html"><button>' + filename + '</button></a>'
+                   document.getElementById('agents_liste').innerHTML += '<a href="src/Fiches_agents/' + filename + '.html"><button>' + filename + '</button></a>'
                 });
             }
         });
