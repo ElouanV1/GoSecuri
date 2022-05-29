@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <h1 class="name" id="name"></h1>
+    <h2 class="mission" id="mission"></h2>
+    <ul class="props" id="props"></ul>
+    <img src="" id="identity_card" class="identity_card">
+
+    <script>
+        const Nom = "Riggs";
+        const Prénom = "Marc";
+        const Mission = "Surveillance entrepôt";
+        const htpassword = "Sc3GIzj6czOW9";
+        const Materiaux = ["mousqueton", "cyno"]; // ["tazer", "matraque", "plaque"]
+
+        document.title = Prénom + " " + Nom;
+
+        document.getElementById("name").innerHTML = Prénom + " " + Nom;
+        document.getElementById("mission").innerHTML = Mission;
+
+        Materiaux.forEach(element => {
+            document.getElementById('props').innerHTML += '<li>' + element + '</li>';
+        });
+
+        const a1 = (Prénom.charAt(0) + Nom).toLocaleLowerCase();
+        const image = document.getElementById("identity_card");
+        image.src = "../img/" + a1 + ".jpg";
+    </script>
+</body>
+</html>
