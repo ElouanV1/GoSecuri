@@ -17,6 +17,7 @@
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
             url: "/src/Fiches_agents/",
             success: function (data) {
+                //test
                 // List all mp4 file names in the page
                 $(data).find("a:contains(" + ".html" + ")").each(function () {
                     console.log(this.href.replace(window.location.host, ""));
