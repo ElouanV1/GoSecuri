@@ -6,7 +6,7 @@
 
   <groupId>java.app</groupId>
   <artifactId>gosecuri</artifactId>
-  <version>1</version>
+  <version>1.0</version>
 
   <name>gosecuri</name>
 
@@ -76,7 +76,7 @@
            <archive>
              <manifest>
                <addClasspath>true</addClasspath>
-               <mainClass>gosecuri</mainClass>
+               <mainClass>App</mainClass>
              </manifest>
            </archive>
           </configuration>
