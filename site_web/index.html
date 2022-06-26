@@ -9,9 +9,9 @@
     <title>Liste des agents</title>
 </head>
 <body>
-    <h2></a>Liste des agents</h2>
+    <h2 class="titre">Liste des agents</h2>
     <ul  class="agents_liste" id="agents_liste">
-    
+        <ul></ul>
         <script>
             var Liste_agents = document.getElementById("agents_liste");
             $.ajax({
@@ -24,8 +24,7 @@
                         console.log(this.href.replace(window.location.host, ""));
                         var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace(".html","");
                         //console.log(filename);
-                    document.getElementById('agents_liste').innerHTML += '<a href="src/Fiches_agents/' + filename + '.html"><button>' + filename + '</button></a>'
-                    });
+                    document.getElementById('agents_liste').innerHTML += '<ul> <a href="src/Fiches_agents/' + filename + '.html"> <button class="button_liste">' + filename + '</button> </a> </ul>'});
                 }
             });
         </script>
