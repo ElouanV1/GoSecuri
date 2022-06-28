@@ -22,7 +22,7 @@ document.title = Prenom + ' ' + Nom;
 document.getElementById('name').innerHTML = Prenom + ' ' + Nom;
 document.getElementById('mission').innerHTML = Mission;
 Materiaux.forEach(element => {
-document.getElementById('props').innerHTML += '<li>' + element + '</li>';
+document.getElementById('props').innerHTML += '<ul>' + element + ' <input type="checkbox" name="my-checkbox" id="opt-in"> </ul>';
 });
 const a1 = (Prenom.charAt(0) + Nom).toLocaleLowerCase();
 const image = document.getElementById('identity_card');

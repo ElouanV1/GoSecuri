@@ -1,0 +1,24 @@
+ul {
+    text-align: center;
+    list-style-position: inside;
+    padding:5px;
+    font-size: 1.2em;
+}
+
+/* Labels for checked inputs */
+input:checked + label {
+  }
+  
+  /* Radio element, when checked */
+  input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px orange;
+  }
+  
+  /* Checkbox element, when checked */
+  input[type="checkbox"]:checked {
+  }
+  
+  /* Option elements, when selected */
+  option:checked {
+    box-shadow: 0 0 0 3px lime;
+}
