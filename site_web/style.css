@@ -6,6 +6,9 @@ ul {
 
 .titre {
     text-align: center;
+    color: #d9671b;
+    font-size: 30px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .button_liste {
