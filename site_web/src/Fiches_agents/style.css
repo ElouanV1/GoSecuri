@@ -5,8 +5,18 @@ ul {
     font-size: 1.2em;
 }
 
+.name {
+    margin-left: 2%;
+}
+
+.mission {
+    margin-left: 2%;
+}
+
 .identity_card {
     position: absolute;
     top: 0px;
     right: 0px;
+    margin-top: 2%;
+    margin-right: 2%;
 }
