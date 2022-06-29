@@ -10,25 +10,25 @@
 </head>
 <body>
     <h2 class="titre">Liste des agents</h2>
-    <ul  class="agents_liste" id="agents_liste">
-        <ul></ul>
-        <script>
-            var Liste_agents = document.getElementById("agents_liste");
-            $.ajax({
-                //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-                url: "/src/Fiches_agents/",
-                success: function (data) {
-                    //test
-                    // List all mp4 file names in the page
-                    $(data).find("a:contains(" + ".html" + ")").each(function () {
-                        console.log(this.href.replace(window.location.host, ""));
-                        var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace(".html","");
-                        //console.log(filename);
-                    document.getElementById('agents_liste').innerHTML += '<ul> <a href="src/Fiches_agents/' + filename + '.html"> <button class="button_liste">' + filename + '</button> </a> </ul>'});
-                }
-            });
-        </script>
+        <ul  class="agents_liste" id="agents_liste">
 
-    </ul>
+            <script>
+                var Liste_agents = document.getElementById("agents_liste");
+                $.ajax({
+                    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+                    url: "/src/Fiches_agents/",
+                    success: function (data) {
+                        //test
+                        // List all mp4 file names in the page
+                        $(data).find("a:contains(" + ".html" + ")").each(function () {
+                            console.log(this.href.replace(window.location.host, ""));
+                            var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace(".html","");
+                            //console.log(filename);
+                        document.getElementById('agents_liste').innerHTML += '<ul> <a href="src/Fiches_agents/' + filename + '.html"> <button class="button_liste">' + filename + '</button> </a> </ul>'});
+                    }
+                });
+            </script>
+
+        </ul>
 </body>
 </html>
